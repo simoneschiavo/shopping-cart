@@ -6,7 +6,7 @@ export default function Header() {
       <img src={logoIpsum} alt="logo" />
       <nav className="navbar">
         <ul>
-          <li>Home</li>
+          <li className="font-bold">Home</li>
           <li>Cart</li>
         </ul>
       </nav>
