@@ -7,6 +7,7 @@ export default function Header() {
       <nav>
         <ul className="flex gap-4">
           <li>Home</li>
+          <li>Products</li>
           <li>Cart</li>
         </ul>
       </nav>
