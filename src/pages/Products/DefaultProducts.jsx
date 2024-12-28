@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import ProductCard from "./ProductCard";
 export default function DefaultProducts() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +25,7 @@ export default function DefaultProducts() {
     <div>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
-      {products && products.map((product) => <div key={product.id}><ProductCard product={product} /></div>)}
+      {products && products.map((product) => <article key={product.id}><ProductCard product={product} /></article>)}
     </div>
   );
 }
