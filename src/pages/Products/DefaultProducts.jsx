@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { getRequestsWithNativeFetch } from "./getRequestsWithNativeFetch";
 
-export default function DefaultProducts() {
+export default function DefaultProducts({ handleAddToCart }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ export default function DefaultProducts() {
     <div className="px-6 pb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
-      {products && products.map((product) => <article key={product.id} className="flex flex-col gap-4"><ProductCard product={product} /></article>)}
+      {products && products.map((product) => <article key={product.id} className="flex flex-col gap-4"><ProductCard product={product} handleAddToCart={handleAddToCart} /></article>)}
     </div>
   );
 }

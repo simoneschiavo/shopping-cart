@@ -1,6 +1,6 @@
 import AddToBag from "./AddToBag";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, handleAddToCart }) {
   return (
     <>
       <div className="relative aspect-square w-full overflow-hidden">
@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
         </p>
         <p>{product.price} §</p>
       </div>
-      <AddToBag />
+      <AddToBag handleAddToCart={handleAddToCart} />
     </>
   );
 }
