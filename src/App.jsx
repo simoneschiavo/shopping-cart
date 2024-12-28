@@ -18,12 +18,12 @@ function App() {
       <section className="flex flex-nowrap gap-2 px-6 h-96">
         <div className="flex-1 relative bg-t-shirt bg-cover bg-center h-full">
           <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 py-2 bg-white text-sm hover:bg-gray-200">
-            Shop tees
+            Shop clothes
           </button>
         </div>
-        <div className="flex-1 relative bg-jeans bg-cover bg-center h-full">
+        <div className="flex-1 relative bg-electronics bg-cover bg-center h-full">
           <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 py-2 bg-white text-sm hover:bg-gray-200">
-            Shop jeans
+            Shop electronics
           </button>
         </div>
       </section>

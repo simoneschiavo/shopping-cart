@@ -6,6 +6,7 @@ export default {
       backgroundImage: {
         "t-shirt": "url('/tshirts2.jpg')",
         "jeans": "url('/jeans.jpg')",
+        "electronics": "url('/electronics2.jpg')",
       },
     },
   },
