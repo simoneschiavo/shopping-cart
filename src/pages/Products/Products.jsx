@@ -6,11 +6,11 @@ import { useState } from "react";
 export default function Products() {
   const { category } = useParams();
 
-    const [cart, setCart] = useState([]);
-    
-    const handleAddToCart = (product) => {
-        setCart(prevCart => [...prevCart, product]);
-    }
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
 
   return (
     <>
