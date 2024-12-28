@@ -20,7 +20,7 @@ export default function ProductCard({ product, handleAddToCart }) {
         </p>
         <p>{product.price} §</p>
       </div>
-      <AddToBag handleAddToCart={handleAddToCart} />
+      <AddToBag product={product} handleAddToCart={handleAddToCart} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-export default function AddToBag({ handleAddToCart }) {
+export default function AddToBag({ product, handleAddToCart }) {
     const handleSubmit = () => {
     const quantity = document.getElementById("quantity").value;
     const productWithQuantity = {
