@@ -1,5 +1,5 @@
-import App from "./src/App";
-import Products from "./src/pages/Products/Products";
+import App from "./App";
+import Products from "./pages/Products/Products";
 
 const routes = [
   {
