@@ -2,7 +2,7 @@ import logoIpsum from "../assets/Logoipsum.svg";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex justify-between items-center p-6 text-xs">
+    <header className="sticky top-0 flex justify-between items-center p-6 text-xs z-10 bg-white">
       <img src={logoIpsum} alt="logo" />
       <nav>
         <ul className="flex gap-4">

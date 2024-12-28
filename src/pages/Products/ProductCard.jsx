@@ -1,3 +1,5 @@
+import AddToBag from "./AddToBag";
+
 export default function ProductCard({ product }) {
   return (
     <>
@@ -7,7 +9,7 @@ export default function ProductCard({ product }) {
           alt={product.title}
           className="w-full h-full object-contain"
         />
-        <p className="absolute top-0 left-0 px-4 py-2 bg-blue-700 text-white text-sm">
+        <p className="absolute top-0 left-0 px-4 py-2 bg-blue-700 text-white text-sm capitalize">
           {product.category}
         </p>
       </div>
@@ -18,6 +20,7 @@ export default function ProductCard({ product }) {
         </p>
         <p>{product.price} §</p>
       </div>
+      <AddToBag />
     </>
   );
 }
