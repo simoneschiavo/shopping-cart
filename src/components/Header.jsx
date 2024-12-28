@@ -2,13 +2,13 @@ import logoIpsum from "../assets/Logoipsum.svg";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center p-6 text-xs">
+    <header className="sticky top-0 flex justify-between items-center p-6 text-xs">
       <img src={logoIpsum} alt="logo" />
       <nav>
         <ul className="flex gap-4">
-          <li>Home</li>
-          <li>Products</li>
-          <li>Cart</li>
+          <li>HOME</li>
+          <li>PRODUCTS</li>
+          <li>CART</li>
         </ul>
       </nav>
     </header>
