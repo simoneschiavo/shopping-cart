@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import "./App.css";
 import Header from "./components/Header";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
         <p className="text-sm">
           Save big with up to 70% off our best selling fake products
         </p>
-        <button className="my-4 px-8 py-2 bg-blue-700 text-white text-sm hover:bg-blue-800">
-          Shop now
-        </button>
+        <Link to="/products">
+          <button className="my-4 px-8 py-2 bg-blue-700 text-white text-sm hover:bg-blue-800">
+            Shop now
+          </button>
+        </Link>
       </section>
       <section className="flex flex-nowrap gap-2 px-6 h-96">
         <div className="flex-1 relative bg-t-shirt bg-cover bg-center h-full">
