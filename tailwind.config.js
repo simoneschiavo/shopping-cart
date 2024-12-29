@@ -7,6 +7,8 @@ export default {
         "t-shirt": "url('/tshirts2.jpg')",
         "jeans": "url('/jeans.jpg')",
         "electronics": "url('/electronics2.jpg')",
+        "women-clothing": "url('/womens-clothing.jpg')",
+        "jewelery": "url('/jewelry.jpg')",
       },
     },
   },
