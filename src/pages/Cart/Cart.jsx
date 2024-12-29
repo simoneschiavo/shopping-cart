@@ -1,12 +1,10 @@
-import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import CartItems from "./CartItems";
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 
 export default function Cart() {
-  const location = useLocation();
-  const [cart, setCart] = useState(location.state?.cart || []);
+  const { cart, removeFromCart } = useCart();
 
   const calculateTotal = () => {
     return cart
@@ -14,19 +12,13 @@ export default function Cart() {
       .toFixed(2);
   };
 
-  const handleRemoveItem = (itemId) => {
-    const newCart = cart.filter((item) => item.id !== itemId);
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+  const handleCheckout = () => {
+    alert("Hey, it's a fake website. No way you wish to pay for real");
   };
-    
-    const handleCheckout = () => {
-        alert("Hey, it's a fake website. No way you wish to pay for real")
-    }
 
   return (
     <>
-      <Header cartCount={cart.length} cart={cart} />
+      <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
         <div className="space-y-4 sm:space-y-8">
           {cart.length === 0 ? (
@@ -47,9 +39,12 @@ export default function Cart() {
                 <p className="text-xl sm:text-lg">Total: ${calculateTotal()}</p>
               </div>
               <div className="overflow-x-auto border-b border-gray-200">
-                <CartItems cart={cart} handleRemoveItem={handleRemoveItem} />
+                <CartItems cart={cart} handleRemoveItem={removeFromCart} />
               </div>
-              <button className="my-4 sm:my-8 px-6 sm:px-8 py-3 sm:py-2 w-full bg-blue-700 text-white text-base sm:text-sm hover:bg-blue-800" onClick={handleCheckout}>
+              <button
+                className="my-4 sm:my-8 px-6 sm:px-8 py-3 sm:py-2 w-full bg-blue-700 text-white text-base sm:text-sm hover:bg-blue-800"
+                onClick={handleCheckout}
+              >
                 Go to checkout
               </button>
             </>

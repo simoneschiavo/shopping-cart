@@ -1,11 +1,15 @@
-export default function AddToBag({ product, handleAddToCart }) {
+import { useCart } from "../../context/CartContext";
+
+export default function AddToBag({ product }) {
+  const { addToCart } = useCart();
+
   const handleSubmit = () => {
     const quantity = document.getElementById("quantity").value;
     const productWithQuantity = {
       ...product,
       quantity: quantity,
     };
-    handleAddToCart(productWithQuantity);
+    addToCart(productWithQuantity);
   };
 
   return (
