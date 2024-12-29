@@ -21,7 +21,7 @@ export default function Header({ cartCount = 0, cart = [] }) {
               className="flex items-center gap-2"
               state={{ cart }}
             >
-              CART {cartCount > 0 && <span>({cartCount})</span>}
+              BAG {cartCount > 0 && <span>({cartCount})</span>}
             </Link>
           </li>
         </ul>

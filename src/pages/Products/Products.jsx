@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import DefaultProducts from "./DefaultProducts";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import ProductCategory from "./ProductCateogry";
 
 export default function Products() {
   const { category } = useParams();
@@ -40,9 +41,25 @@ export default function Products() {
     <>
       <Header cartCount={cart.length} cart={cart} />
       {category === "electronics" ? (
-        <Electronics />
-      ) : category === "clothes" ? (
-        <Clothes />
+        <ProductCategory
+          handleAddToCart={handleAddToCart}
+          categoryName={category}
+        />
+      ) : category === "men's clothing" ? (
+        <ProductCategory
+          handleAddToCart={handleAddToCart}
+          categoryName={category}
+        />
+      ) : category === "women's clothing" ? (
+        <ProductCategory
+          handleAddToCart={handleAddToCart}
+          categoryName={category}
+        />
+      ) : category === "jewelery" ? (
+        <ProductCategory
+          handleAddToCart={handleAddToCart}
+          categoryName={category}
+        />
       ) : (
         <DefaultProducts handleAddToCart={handleAddToCart} />
       )}
