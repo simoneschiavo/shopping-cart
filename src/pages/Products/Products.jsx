@@ -28,7 +28,7 @@ export default function Products() {
         return item;
       });
     } else {
-      // If troduct doesn't exist, add it
+      // If product doesn't exist, add it
       newCart = [...cart, product];
     }
 
@@ -38,7 +38,7 @@ export default function Products() {
 
   return (
     <>
-      <Header cartCount={cart.length} />
+      <Header cartCount={cart.length} cart={cart} />
       {category === "electronics" ? (
         <Electronics />
       ) : category === "clothes" ? (

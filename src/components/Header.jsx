@@ -1,7 +1,7 @@
 import logoIpsum from "../assets/Logoipsum.svg";
 import { Link } from "react-router-dom";
 
-export default function Header({ cartCount = 0 }) {
+export default function Header({ cartCount = 0, cart = [] }) {
   return (
     <header className="sticky top-0 flex justify-between items-center p-6 text-xs z-10 bg-white">
       <Link to="/">
@@ -16,13 +16,12 @@ export default function Header({ cartCount = 0 }) {
             <Link to="/products">PRODUCTS</Link>
           </li>
           <li>
-            <Link to="/cart" className="flex items-center gap-2">
-              CART{" "}
-              {cartCount > 0 && (
-                <span>
-                  ({cartCount})
-                </span>
-              )}
+            <Link
+              to="/cart"
+              className="flex items-center gap-2"
+              state={{ cart }}
+            >
+              CART {cartCount > 0 && <span>({cartCount})</span>}
             </Link>
           </li>
         </ul>
