@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 import CartItems from "./CartItems";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const location = useLocation();
@@ -27,6 +28,11 @@ export default function Cart() {
           {cart.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-500">There's nothing in your bag.</p>
+              <Link to="/products">
+                <button className="my-4 px-8 py-2 bg-blue-700 text-white text-sm hover:bg-blue-800">
+                  Shop now
+                </button>
+              </Link>
             </div>
           ) : (
             <>
