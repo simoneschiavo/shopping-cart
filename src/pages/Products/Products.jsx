@@ -11,7 +11,27 @@ export default function Products() {
   });
 
   const handleAddToCart = (product) => {
-    const newCart = [...cart, product];
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === product.id
+    );
+
+    let newCart;
+    if (existingProductIndex >= 0) {
+      // If the product exists, update quantity
+      newCart = cart.map((item, index) => {
+        if (index === existingProductIndex) {
+          return {
+            ...item,
+            quantity: Number(item.quantity) + Number(product.quantity),
+          };
+        }
+        return item;
+      });
+    } else {
+      // If troduct doesn't exist, add it
+      newCart = [...cart, product];
+    }
+
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
