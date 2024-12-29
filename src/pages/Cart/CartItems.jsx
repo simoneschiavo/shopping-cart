@@ -1,4 +1,4 @@
-export default function CartItems({ cart }) {
+export default function CartItems({ cart, handleRemoveItem }) {
   return (
     <table className="min-w-full divide-y divide-gray-200">
       <thead className="bg-gray-50">
@@ -56,6 +56,14 @@ export default function CartItems({ cart }) {
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
               ${(item.price * item.quantity).toFixed(2)}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <button
+                onClick={() => handleRemoveItem(item.id)}
+                className="text-red-600 hover:text-red-900 underline"
+              >
+                Remove
+              </button>
             </td>
           </tr>
         ))}
