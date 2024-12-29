@@ -1,8 +1,31 @@
-# React + Vite
+# FakeStore Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce demo application built with React, Vite, and TailwindCSS. This project demonstrates a modern shopping cart implementation with responsive design for both desktop and mobile devices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design for mobile and desktop views
+- Product catalog with category filtering
+- Shopping cart functionality
+- Local storage persistence for cart items
+- Dynamic product loading from FakeStore API
+- Category-based product browsing
+
+## Technologies Used
+
+- React 18
+- Vite
+- TailwindCSS
+- React Router DOM
+- FakeStore API
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
