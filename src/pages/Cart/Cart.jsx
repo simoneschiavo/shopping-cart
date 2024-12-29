@@ -19,6 +19,10 @@ export default function Cart() {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
+    
+    const handleCheckout = () => {
+        alert("Hey, it's a fake website. No way you wish to pay for real")
+    }
 
   return (
     <>
@@ -45,11 +49,9 @@ export default function Cart() {
               <div className="overflow-x-auto border-b border-gray-200">
                 <CartItems cart={cart} handleRemoveItem={handleRemoveItem} />
               </div>
-              <Link to="/checkout" className="block w-full">
-                <button className="my-4 sm:my-8 px-6 sm:px-8 py-3 sm:py-2 w-full bg-blue-700 text-white text-base sm:text-sm hover:bg-blue-800">
-                  Go to checkout
-                </button>
-              </Link>
+              <button className="my-4 sm:my-8 px-6 sm:px-8 py-3 sm:py-2 w-full bg-blue-700 text-white text-base sm:text-sm hover:bg-blue-800" onClick={handleCheckout}>
+                Go to checkout
+              </button>
             </>
           )}
         </div>
