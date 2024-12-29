@@ -1,12 +1,14 @@
-// import { useState } from 'react'
+// import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import { Link } from "react-router-dom";
 
 function App() {
+  const cartCount = JSON.parse(localStorage.getItem("cart"))?.length || 0;
+
   return (
     <>
-      <Header />
+      <Header cartCount={cartCount} />
       <section className="flex flex-col items-center justify-center gap-1 text-center">
         <h1 className="text-3xl font-bold">Fake Products for Fake Money</h1>
         <p className="text-sm">
